@@ -9,4 +9,16 @@ $Soft-Magenta: hsl(300, 69%, 71%);
 
 body {
     font-family: $body-font-family;
+    background: url("../images/bg-mobile.svg") no-repeat;
+    background-color: $Violet;
+    background-size: contain;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 350px;
 }
