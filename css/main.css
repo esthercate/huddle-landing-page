@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   background: url("../images/bg-mobile.svg") no-repeat;
@@ -37,13 +44,13 @@ body {
 
 @media (min-width: 900px) {
   .container {
-    max-width: 1200px;
+    max-width: 1300px;
   }
 }
 
 header .logo {
   text-align: left;
-  padding-bottom: 3rem;
+  padding: 2rem 0;
 }
 
 header .logo img {
@@ -83,7 +90,7 @@ header .logo img {
   .main .right {
     width: 40%;
     text-align: left;
-    padding: 0 3rem;
+    padding: 2rem 3rem;
   }
 }
 
@@ -153,11 +160,12 @@ header .logo img {
 }
 
 .social-icons i {
-  width: 1rem;
-  border: solid 1px white;
+  width: 2rem;
+  height: 2rem;
+  border: solid 2px white;
   border-radius: 50%;
-  padding: .5rem;
   color: white;
+  padding: .5rem;
   margin-right: .5rem;
 }
 
