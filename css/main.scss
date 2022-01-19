@@ -7,18 +7,166 @@ $body-font-family: 'Open Sans', sans-serif; // body
 $Violet: hsl(257, 40%, 49%);
 $Soft-Magenta: hsl(300, 69%, 71%);
 
+$desktop: 900px;
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+
+
 body {
     font-family: $body-font-family;
     background: url("../images/bg-mobile.svg") no-repeat;
-    background-color: $Violet;
     background-size: contain;
+    background-color: $Violet;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    min-height: 100vh;
+
+    @include desktop {
+        background: url("../images/bg-desktop.svg") no-repeat;
+        background-color: $Violet;
+        background-size: contain;
+        background-position: center;
+    }
 }
 
 .container {
     max-width: 350px;
+    text-align: center;
+
+    @include desktop {
+        max-width: 1400px;
+    }
+}
+
+header {
+
+
+    .logo {
+        margin: 3rem 0 3.5rem 0;
+        text-align: left;
+
+        img {
+            width: 40%;
+
+            @include desktop {
+                width: 15%;
+            }
+
+        }
+    }
+}
+
+.main {
+
+    @include desktop {
+        display: flex;
+    }
+
+
+    .left {
+        margin-bottom: 3rem;
+
+        @include desktop {
+            width: 60%;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .right {
+
+        @include desktop {
+            width: 40%;
+            text-align: left;
+            padding: 0 3rem;
+            
+        }
+
+        .heading {
+
+           @include desktop {
+                font-size: 1.5rem;
+           }
+
+            h1{
+                color: white;
+                font-family: $headings-font-family;
+                line-height: 2.5rem;
+                letter-spacing: .6px;
+
+                @include desktop {
+                    line-height: 3.5rem;
+               }
+
+            }
+        }
+    }
+
+    .main-paragraph {
+
+        p {
+            color: white;
+            opacity: 70%;
+            font-size: 17px;
+            font-family: $body-font-family;
+            letter-spacing: .6px;
+        }
+    }
+
+    .register {
+
+        margin: 2.5rem 0;
+
+        a {
+            text-decoration: none;
+            background-color: white;
+            padding: .8rem 6rem;
+            border-radius: 50px;
+            color: $Violet;
+            font-family: $body-font-family;
+
+            &:hover {
+                background-color: $Soft-Magenta;
+                color: white;
+                opacity: 90%;
+            }
+            
+        }
+    }
+    
+}
+
+.social-icons {
+    margin: 4rem 0 2rem 0;
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+    i {
+        width: 1rem;
+        border: solid 1px white;
+        border-radius: 50%;
+        padding: .5rem;
+        color: white;
+        margin-right: .5rem;
+
+        &:hover {
+            color: $Soft-Magenta;
+            border-color: $Soft-Magenta;
+            cursor: pointer;
+        }
+    }
+
 }
