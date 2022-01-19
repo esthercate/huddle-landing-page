@@ -156,6 +156,7 @@ header .logo img {
     -webkit-box-pack: right;
         -ms-flex-pack: right;
             justify-content: right;
+    margin: .5rem;
   }
 }
 
