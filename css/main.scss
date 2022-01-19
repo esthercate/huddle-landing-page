@@ -39,8 +39,9 @@ body {
     max-width: 350px;
     text-align: center;
 
+
     @include desktop {
-        max-width: 900px;
+        max-width: 1200px;
     }
 }
 
@@ -48,8 +49,8 @@ header {
 
 
     .logo {
-        margin: 2rem 0 2.5rem 0;
         text-align: left;
+        padding-bottom: 3rem;
 
         img {
             width: 40%;
